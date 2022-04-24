@@ -1,0 +1,16 @@
+<!--Создадим представление /skill/<skill_name> для поиска по навыкам.-->
+<!--Выведите тех кандидатов, в списке навыков у которых содержится skill.-->
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Навыки кандидатов</title>
+</head>
+<body>
+    <h1>Найдено со скиллом {{ skill_name }}: {{ len_skill }} кандидата</h1>
+    {% for candidate in candidates %}
+        <p><a href="/candidate/{{ candidate.id }}">{{ candidate.name }}</a></p>
+    {% endfor %}
+</body>
+</html>
